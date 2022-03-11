@@ -165,10 +165,10 @@
                     <div class="col-md-8 col-md-offset-2">
                         <div class="row">
                             <div class="col-md-6">
-                                <p class="text-center" style="text-align-last:center"><img style="max-height: 60px;" src="2409/10-01.png" class=" wow bounceInUp" data-wow-delay="0.4s"></p>
+                                <p class="text-center" style="text-align-last:center"><img style="max-height: 60px;" src="frontend/2409/10-01.png" class=" wow bounceInUp" data-wow-delay="0.4s"></p>
                             </div>
                             <div class="col-md-6">
-                                <p class="text-center" style="text-align-last:center"><img style="max-height: 60px;" src="2409/10-02.png" class=" wow bounceInUp" data-wow-delay="0.6s"></p>
+                                <p class="text-center" style="text-align-last:center"><img style="max-height: 60px;" src="frontend/2409/10-02.png" class=" wow bounceInUp" data-wow-delay="0.6s"></p>
                             </div>
                         </div>
                     </div>
