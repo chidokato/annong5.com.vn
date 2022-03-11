@@ -209,9 +209,9 @@
                     <div class="col-md-4 wow bounceInRight">
 
                         <!-- <p>Địa chỉ dự án:</p> -->
-                        <div style="font-size: 17px; font-weight:bold; text-align:center">CÔNG TY CP XÂY DỰNG ĐỊA ỐC AN PHÚC</div>
+                        <div style="font-size: 17px; font-weight:bold; text-align:center">{{$head_setting->name}}</div>
                         <p style="font-size: 15px;">
-                            268 Đường Tên Lửa, Bình Trị Đông B, Bình Tân <br> TP Hồ Chí Minh
+                            {{$head_setting->address}}
                         </p>
                     </div>
                     <div class="col-md-4 wow bounceInRight" data-wow-delay="0.2s">
