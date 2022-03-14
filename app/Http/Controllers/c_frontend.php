@@ -154,7 +154,8 @@ class c_frontend extends Controller
     {
         $head_setting = setting::where('id',1)->first();
         $mail = $head_setting['email'];
-		$this->validate($Request,['phone' => 'Required'],[] );
+		
+        $this->validate($Request,['phone' => 'Required'],[] );
         $name = $Request->name;
         $phone = $Request->phone;
         $email = $Request->email;
@@ -166,6 +167,7 @@ class c_frontend extends Controller
             $message->from($mail, 'annong5.com.vn');
             $message->to($mail, 'annong5.com.vn')->subject('Thông tin khách hàng');
         });
+        
         //return view('pages.camon')->with('Alerts','Gửi thành công');
 		return redirect('/')->with('Alerts','Thành công');
     }

@@ -6,22 +6,24 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-body">
-                    <div class="slideInfo2 dangki">
+                    <div class="slideInfo2">
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                         <p>Đăng ký nhận ưu đãi<br />và tư vấn miễn phí</p>
-                        <form class="widget-contact-form" data-element="mail-to-admin">
+                        <form class="widget-contact-form" action="dang-ky" method="POST" >
+                            <input type="hidden" name="_token" value="{{csrf_token()}}" />
+                            <input type="hidden" name="link" value="<?php echo 'http://'.$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI']; ?>" />
                             <div class="form-group">
-                                <input type="text" aria-required="true" name="Họ và tên" class="form-control name" placeholder="Họ và tên" />
+                                <input type="text" aria-required="true" name="name" class="form-control name" placeholder="Họ và tên" />
                             </div>
                             <div class="form-group">
-                                <input type="text" aria-required="true" name="Số điện thoại" class="form-control phone" placeholder="Số điện thoại" />
+                                <input type="text" aria-required="true" name="phone" class="form-control phone" placeholder="Số điện thoại" />
                             </div>
                             <div class="form-group">
                                 <input type="email" aria-required="true" name="email" class="form-control email" placeholder="Email" />
                             </div>
                             <div class="form-group text-center">
                                 <input type="hidden" name="subject" value="Đăng ký nhận ưu đãi" />
-                                <button class="btn btn-my btn-send-mail" data-action="Khách hàng bấm nút Đăng ký nhận thông tin" type="button">Đăng ký nhận thông tin</button>
+                                <button class="btn btn-my btn-send-mail" data-action="Khách hàng bấm nút Đăng ký nhận thông tin" type="submit">Đăng ký nhận thông tin</button>
                             </div>
                         </form>
                     </div>

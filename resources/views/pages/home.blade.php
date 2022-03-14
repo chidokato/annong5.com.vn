@@ -22,10 +22,10 @@
                 <input type="hidden" name="_token" value="{{csrf_token()}}" />
                 <input type="hidden" name="link" value="<?php echo 'http://'.$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI']; ?>" />
                 <div class="form-group">
-                    <input type="text" aria-required="true" name="Họ và tên" class="form-control name" placeholder="Họ và tên">
+                    <input type="text" name="name" class="form-control name" placeholder="Họ và tên">
                 </div>
                 <div class="form-group">
-                    <input type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" pattern="\d*" maxlength="11" min="010000000" max="99999999999"  aria-required="true" name="Số điện thoại" class="form-control phone" placeholder="Số điện thoại">
+                    <input type="number" name="phone" class="form-control phone" placeholder="Số điện thoại">
                 </div>
                 <div class="form-group">
                     <input type="email"  name="email" class="form-control email" placeholder="Email">
@@ -177,17 +177,19 @@
                     </div>
                 </div>
                 <div class="wow bounceInRight">
-                    <form class="" data-wow-delay="0.3s" data-element="mail-to-admin">
+                    <form method="post" action="dang-ky">
+                        <input type="hidden" name="_token" value="{{csrf_token()}}" />
+                        <input type="hidden" name="link" value="<?php echo 'http://'.$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI']; ?>" />
                         <!-- <p>Đăng ký nhận ưu đãi<br>và tư vấn miễn phí</p> -->
                         <div class="row">
                             <div class="col-md-4">
                                 <div class="form-group">
-                                    <input type="text" aria-required="true" name="Họ và tên" class="form-control name" placeholder="Họ và tên">
+                                    <input type="text" aria-required="true" name="name" class="form-control name" placeholder="Họ và tên">
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group">
-                                    <input type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" pattern="\d*" maxlength="11" min="010000000" max="99999999999" aria-required="true" name="Số điện thoại" class="form-control phone" placeholder="Số điện thoại">
+                                    <input type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" pattern="\d*" maxlength="11" min="010000000" max="99999999999" aria-required="true" name="phone" class="form-control phone" placeholder="Số điện thoại">
                                 </div>
                             </div>
                             <div class="col-md-4">
@@ -198,7 +200,7 @@
 
                         </div>
                         <input type="hidden" name="subject" value="Đăng ký nhận ưu đãi">
-                        <p class="text-center"><button class="btn btn-my btn-send-mail" data-action="Khách hàng bấm nút Đăng ký nhận thông tin" type="button">Đăng ký nhận thông tin</button></p>
+                        <p class="text-center"><button class="btn btn-my btn-send-mail" type="submit">Đăng ký nhận thông tin</button></p>
                     </form>
                 </div>
             </div>
