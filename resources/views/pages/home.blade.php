@@ -81,6 +81,9 @@
                             <p><a href="javascript:void(0)" class="btn btn-my btn-mua">Đăng ký nhận thông tin</a></p>
                         </div>
                     </div>
+                    <div class="col-md-7 video-youtube">
+                        <iframe src="https://www.youtube.com/embed/p6dpGTdk7FQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
                 </div>
             </div>
         </section>

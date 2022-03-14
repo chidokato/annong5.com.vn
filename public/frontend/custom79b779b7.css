@@ -710,3 +710,10 @@ input::-webkit-inner-spin-button {
 input[type=number] {
     -moz-appearance: textfield;
 }
+
+.video-youtube{ margin-top: 400px }
+.video-youtube iframe{width: 100%; height: 420px}
+@media (max-width:480px){
+	.video-youtube{ margin-top: 10px }
+	.video-youtube iframe{height: 245px}
+}
