@@ -152,21 +152,21 @@ class c_frontend extends Controller
 
 	public function dangky(Request $Request)
     {
-        $head_setting = setting::where('id',1)->first();
-        $mail = $head_setting['email'];
+  //       $head_setting = setting::where('id',1)->first();
+  //       $mail = $head_setting['email'];
 		
-        $this->validate($Request,['phone' => 'Required'],[] );
-        $name = $Request->name;
-        $phone = $Request->phone;
-        $email = $Request->email;
-        $link = $Request->link;
-        $content = $Request->content;
-		$date = date('m/d/Y h:i:s', time());
+  //       $this->validate($Request,['phone' => 'Required'],[] );
+  //       $name = $Request->name;
+  //       $phone = $Request->phone;
+  //       $email = $Request->email;
+  //       $link = $Request->link;
+  //       $content = $Request->content;
+		// $date = date('m/d/Y h:i:s', time());
         
-        Mail::send('email_feedback', array('name'=>$name,'phone'=>$phone,'email'=>$email,'link'=>$link,'content'=>$content,'date'=>$date) , function($message) use ($mail){
-            $message->from($mail, 'annong5.com.vn');
-            $message->to($mail, 'annong5.com.vn')->subject('Thông tin khách hàng');
-        });
+  //       Mail::send('email_feedback', array('name'=>$name,'phone'=>$phone,'email'=>$email,'link'=>$link,'content'=>$content,'date'=>$date) , function($message) use ($mail){
+  //           $message->from($mail, 'annong5.com.vn');
+  //           $message->to($mail, 'annong5.com.vn')->subject('Thông tin khách hàng');
+  //       });
         
         //return view('pages.camon')->with('Alerts','Gửi thành công');
 		return redirect('/')->with('Alerts','Thành công');

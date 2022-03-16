@@ -13,17 +13,16 @@
                             <input type="hidden" name="_token" value="{{csrf_token()}}" />
                             <input type="hidden" name="link" value="<?php echo 'http://'.$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI']; ?>" />
                             <div class="form-group">
-                                <input type="text" aria-required="true" name="name" class="form-control name" placeholder="Họ và tên" />
+                                <input type="text" aria-required="true" value="tuấn" name="name" class="form-control name" placeholder="Họ và tên" />
                             </div>
                             <div class="form-group">
-                                <input type="text" aria-required="true" name="phone" class="form-control phone" placeholder="Số điện thoại" />
+                                <input type="text" aria-required="true" value="0977572947" name="phone" class="form-control phone" placeholder="Số điện thoại" />
                             </div>
                             <div class="form-group">
-                                <input type="email" aria-required="true" name="email" class="form-control email" placeholder="Email" />
+                                <input type="email" aria-required="true" value="tuan.pn92@gmail.com" name="email" class="form-control email" placeholder="Email" />
                             </div>
                             <div class="form-group text-center">
-                                <input type="hidden" name="subject" value="Đăng ký nhận ưu đãi" />
-                                <button class="btn btn-my btn-send-mail" data-action="Khách hàng bấm nút Đăng ký nhận thông tin" type="submit">Đăng ký nhận thông tin</button>
+                                <input type="submit">
                             </div>
                         </form>
                     </div>
@@ -112,21 +111,6 @@
         if (screen.width >= 992) {
             $('#mainMenu').addClass("hide");
         }
-
-        var getUrlParameter = function getUrlParameter(sParam) {
-            var sPageURL = decodeURIComponent(window.location.search.substring(1)),
-                sURLVariables = sPageURL.split('&'),
-                sParameterName,
-                i;
-
-            for (i = 0; i < sURLVariables.length; i++) {
-                sParameterName = sURLVariables[i].split('=');
-
-                if (sParameterName[0] === sParam) {
-                    return sParameterName[1] === undefined ? true : sParameterName[1];
-                }
-            }
-        };
 
         function showMenu() {
             if ($('#mainMenu').hasClass("hide")) {
